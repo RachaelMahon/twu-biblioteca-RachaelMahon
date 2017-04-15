@@ -4,32 +4,31 @@ package com.twu.biblioteca;
  * Created by rachaelmahon on 12/04/2017.
  */
 
-import java.util.List;
-
+import java.util.ArrayList;
 
 public class Book_Manager {
 
-    List <Book> available_books;
-    List <Book> your_checkedout_books;
+    ArrayList<Book> availableBooks = new ArrayList<Book>();
 
-    public Book_Manager() {
-
+    Book_Manager() {
+        availableBooks.add(new Book("Moby Dick", "Herman Melville", 1851));
+        availableBooks.add(new Book("The Handmaid's Tale", "Margaret Atwood", 1985));
+        availableBooks.add(new Book("We Need to Talk about Kevin", "Lionel Shriver", 2003));
     }
 
-    public static void display_books () {
-
+    void displayBooks() {
+        for (Book book : availableBooks) {
+            book.prettyPrintBooksDetails();
+        }
     }
 
-    public static void pretty_print_books () {
 
+    void checkoutBook(String args) {
+        System.out.println(args);
     }
 
-
-    public static void checkout_book () {
-
-    }
-
-    public static void return_book () {
-
+    void returnBook(String args) {
+        System.out.println(args);
     }
 }
+

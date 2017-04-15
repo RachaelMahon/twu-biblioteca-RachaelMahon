@@ -5,16 +5,19 @@ package com.twu.biblioteca;
  */
 public class Book {
 
-    private String name;
-    private String author;
-    private Integer year_of_publication;
+    String name;
+    String author;
+    Integer year_of_publication;
+    boolean isAvailable;
 
-    public Book(String name, String author, Integer year_of_publication) {
+    Book(String name, String author, Integer year_of_publication) {
         this.name = name;
         this.author = author;
         this.year_of_publication = year_of_publication;
+        isAvailable = true;
     }
 
-
-
+    void prettyPrintBooksDetails() {
+        System.out.println( name + " | " + author + " | " + year_of_publication);
+    }
 }
